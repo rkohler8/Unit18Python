@@ -11,3 +11,11 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    mostCommon = (0, 0)
+    for num in nums:
+        if nums.count(num) > mostCommon[1]:
+            mostCommon = (num, nums.count(num))
+    return mostCommon[0]
+
+# DONE

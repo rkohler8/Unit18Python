@@ -29,3 +29,12 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    sum = 0
+    for ltr in word:
+        sum += ord(ltr.lower()) - 96
+    if sum % 2 == 0:
+        return False
+    return True
+
+# DONE
